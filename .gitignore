@@ -1,0 +1,63 @@
+# Ignorar arquivos de compilação do Delphi
+*.dcu
+*.dsk
+*.dof
+*.bdsproj
+*.bdsdproj
+*.dsw
+*.dproj
+*.dch
+*.res
+*.exe
+*.dll
+*.o
+*.obj
+*.map
+*.dbg
+*.pdb
+*.bpl
+*.dpk
+*.dproj.user
+*.dproj.local
+*.grouproj.local
+*.bak
+*.~bds
+*.~cfg
+*.~pas
+
+# Ignorar pastas de compilação do Delphi
+\_bin
+\_release
+\_debug
+\_output
+\_install
+\_work
+
+# Ignorar arquivos de backup
+*.bak
+*.backup
+
+# Ignorar arquivos temporários do editor
+*.~bds
+*.~local
+*.~cfg
+
+# Ignorar pastas de temporários do Delphi
+*.local
+*.dcu
+*.~tmp
+*.~bds
+*.~cfg
+
+# Ignorar arquivos de configuração de usuários
+.idea/
+.vscode/
+
+# Ignorar dependências de pacotes de terceiros
+packages/
+
+# Ignorar logs
+*.log
+
+# Ignorar arquivos de configuração do Delphi (configurações locais do projeto)
+*.local
