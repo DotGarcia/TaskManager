@@ -170,7 +170,7 @@ boss install jhonson
 2. Compile e execute (F9)
 3. O servidor inicia na porta 9000
 
-> **Nota**: Por padrão, o servidor usa repositório em memória. Para usar SQL Server, altere `LUseDatabase := True` no programa principal e execute o script `sql/001_CreateDatabase.sql`.
+> **Nota**: Por padrão, o servidor usa repositório em memória. Para usar SQL Server, altere `LUseDatabase := True` no programa principal e execute o script `sql/001_Schema.sql`.
 
 ### 2. Cliente VCL
 
