@@ -9,7 +9,7 @@ TaskManagerBDMG/
 ├── Server/                          # Parte 1 - API REST (Horse)
 │   ├── TaskManagerServer.dpr        # Programa principal do servidor
 │   ├── sql/
-│   │   └── 001_CreateDatabase.sql   # Script de criação do banco SQL Server
+│   │   └── 001_Schema.sql   # Script de criação do banco SQL Server
 │   └── src/
 │       ├── Attributes/              # Atributos RTTI customizados (ORM)
 │       │   └── TaskManager.Attributes.pas
@@ -53,9 +53,6 @@ TaskManagerBDMG/
 │       ├── TaskManager.Tests.UserService.pas   # Testes de usuário
 │       ├── TaskManager.Tests.TaskService.pas   # Testes de tarefa
 │       └── TaskManager.Tests.RttiMapper.pas    # Testes de RTTI/ORM
-│
-└── Docs/
-    └── README.md                    # Este arquivo
 ```
 
 ## Arquitetura
