@@ -23,6 +23,8 @@
 *.~bds
 *.~cfg
 *.~pas
+*.identcache
+*.tvsconfig
 
 # Ignorar pastas de compilação do Delphi
 \_bin
