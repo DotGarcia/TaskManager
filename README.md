@@ -111,7 +111,7 @@ O servidor carrega suas configurações de um arquivo JSON no mesmo diretório d
     "port": 9000
   },
   "jwt": {
-    "secretKey": "TaskManager_BDMG_SecretKey_2025!@#",
+    "secretKey": "TaskManager_BDMG_SecretKey_2026!@#",
     "expirationHours": 24
   }
 }
@@ -216,7 +216,7 @@ WHERE [UserId] = :UserId AND [Status] = 2
 - Delphi 10.4+ (Alexandria ou superior)
 - [Horse Framework](https://github.com/HashLoad/horse) (via Boss ou manualmente)
 - [Horse-Jhonson](https://github.com/HashLoad/jhonson) (middleware JSON)
-- SQL Server (opcional — roda em memória quando `useDatabase = false`)
+- SQL Server (roda em memória quando `useDatabase = false`)
 
 ### Dependências (instalar via Boss)
 
