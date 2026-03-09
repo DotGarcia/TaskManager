@@ -65,7 +65,8 @@ packages/
 
 # Ignorar arquivos de histórico gerados pelo Delphi
 Client\src\Forms\__history\*
+Tests\dunitx-results.xml
 
-# Ignorar arquivos groupproj.loca e user
-*.groupproj.loca
+# Ignorar arquivos groupproj.local e user
+*.groupproj.local
 *.user

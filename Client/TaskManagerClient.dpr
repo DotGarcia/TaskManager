@@ -45,14 +45,23 @@ begin
   { Criar servico de API com URL configurada }
   LApiService := TApiService.Create(LBaseUrl);
   try
+    { Exibir LoginForm primeiro — ele se torna o MainForm real.
+      Dessa forma o icone na taskbar pertence a janela que o usuario ve.
+      O frmMain so e criado apos login bem-sucedido, evitando o problema
+      de icone invisivel causado pelo ShowModal dentro do OnShow. }
+    Application.CreateForm(TfrmLogin, frmLogin);
+    frmLogin.ApiService := LApiService;
+
+    { O frmMain cuida de reexibir o frmLogin no seu FormClose.
+      O callback apenas garante que o close seja disparado caso
+      a sessao expire durante uma requisicao. }
     LApiService.OnUnauthorized :=
       procedure
       begin
-        { Formulario principal trata redirecionamento ao login }
+        if Assigned(frmMain) then
+          frmMain.Close;
       end;
 
-    Application.CreateForm(TfrmMain, frmMain);
-    frmMain.ApiService := LApiService;
     Application.Run;
   finally
     LApiService.Free;
