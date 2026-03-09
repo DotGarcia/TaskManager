@@ -311,3 +311,17 @@ boss install jhonson
 | **Total** | **35** | **22** | **13** |
 
 Todos os 35 testes rodam sem dependência de banco de dados, utilizando `TMemoryUserRepository` e `TMemoryTaskRepository` como dublês de teste.
+
+## Representação de execução do client VCL
+
+### Login
+<img width="475" height="474" alt="Screenshot 2026-03-09 081151" src="https://github.com/user-attachments/assets/186e4104-1860-4be6-809d-b21b56eb6afb" />
+
+### Cadastro
+<img width="472" height="584" alt="Screenshot 2026-03-09 081202" src="https://github.com/user-attachments/assets/bb03813f-27ea-4492-8175-21c6a0dcb319" />
+
+### Gerenciamento de tarefas
+<img width="990" height="445" alt="Screenshot 2026-03-09 081644" src="https://github.com/user-attachments/assets/4ab2d018-5497-4cd8-adae-cfa9db1e95a0" />
+
+### Estatísticas
+<img width="991" height="441" alt="Screenshot 2026-03-09 081653" src="https://github.com/user-attachments/assets/caa08165-2bc4-40d2-9c09-c8dfe057decd" />
