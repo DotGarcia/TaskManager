@@ -43,7 +43,7 @@ object frmMain: TfrmMain
     end
     object pnlBtnLogout: TPanel
       Left = 758
-      Top = 18
+      Top = 12
       Width = 80
       Height = 32
       Anchors = [akTop, akRight]
@@ -78,6 +78,7 @@ object frmMain: TfrmMain
       ParentFont = False
       TabOrder = 1
       OnClick = pnlBtnRefreshClick
+      ExplicitLeft = 662
     end
   end
   object pgcMain: TPageControl
