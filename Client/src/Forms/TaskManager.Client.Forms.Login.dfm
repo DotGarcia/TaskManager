@@ -105,7 +105,7 @@ object frmLogin: TfrmLogin
       Left = 50
       Top = 138
       Width = 280
-      Height = 28
+      Height = 27
       Font.Charset = DEFAULT_CHARSET
       Font.Color = 3355443
       Font.Height = -14
@@ -118,7 +118,7 @@ object frmLogin: TfrmLogin
       Left = 50
       Top = 202
       Width = 280
-      Height = 28
+      Height = 27
       Font.Charset = DEFAULT_CHARSET
       Font.Color = 3355443
       Font.Height = -14

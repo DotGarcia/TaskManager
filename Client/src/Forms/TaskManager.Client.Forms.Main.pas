@@ -46,6 +46,7 @@ type
     procedure pnlBtnDeleteClick(Sender: TObject);
     procedure pnlBtnRefreshStatsClick(Sender: TObject);
     procedure tabStatsShow(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
     // Hover effects
     procedure PanelBtnMouseEnter(Sender: TObject);
     procedure PanelBtnMouseLeave(Sender: TObject);
@@ -139,29 +140,23 @@ end;
 
 procedure TfrmMain.FormShow(Sender: TObject);
 begin
-  if not FApiService.IsAuthenticated then
-    ShowLogin
-  else
-    LoadTasks;
+  LoadTasks;
+end;
+
+procedure TfrmMain.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Action := caFree;
+  frmMain := nil;
+  FApiService.Logout;
+  frmLogin.edtEmail.Clear;
+  frmLogin.edtPassword.Clear;
+  frmLogin.lblStatus.Caption := '';
+  frmLogin.Show;
 end;
 
 procedure TfrmMain.ShowLogin;
-var
-  LFormLogin: TfrmLogin;
 begin
-  LFormLogin := TfrmLogin.Create(Self);
-  try
-    LFormLogin.ApiService := FApiService;
-    if LFormLogin.ShowModal = mrOk then
-    begin
-      lblWelcome.Caption := 'TaskManager BDMG';
-      LoadTasks;
-    end
-    else
-      Application.Terminate;
-  finally
-    LFormLogin.Free;
-  end;
+  Close;
 end;
 
 procedure TfrmMain.HandleUnauthorized;
@@ -334,7 +329,7 @@ procedure TfrmMain.pnlBtnLogoutClick(Sender: TObject);
 begin
   FApiService.Logout;
   lvTasks.Items.Clear;
-  ShowLogin;
+  Application.Terminate;
 end;
 
 end.

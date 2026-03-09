@@ -43,7 +43,8 @@ var
 implementation
 
 uses
-  TaskManager.Client.Forms.Register;
+  TaskManager.Client.Forms.Register,
+  TaskManager.Client.Forms.Main;
 
 {$R *.dfm}
 
@@ -89,7 +90,11 @@ begin
     begin
       lblStatus.Caption := 'Login realizado com sucesso!';
       lblStatus.Font.Color := $0000AA00;
-      ModalResult := mrOk;
+
+      frmMain := TfrmMain.Create(Application);
+      frmMain.ApiService := FApiService;
+      Hide;
+      frmMain.Show;
     end;
   except
     on E: Exception do
