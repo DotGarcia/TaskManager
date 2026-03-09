@@ -1,0 +1,20 @@
+{
+  "database": {
+    "useDatabase": true,
+    "driverID": "MSSQL",
+    "server": "localhost",
+    "database": "TaskManagerDB",
+    "authentication": "windows",
+    "username": "",
+    "password": "",
+    "encrypt": "no",
+    "trustServerCertificate": "yes"
+  },
+  "server": {
+    "port": 9000
+  },
+  "jwt": {
+    "secretKey": "TaskManager_BDMG_SecretKey_2025!@#",
+    "expirationHours": 24
+  }
+}

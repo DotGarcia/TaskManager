@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{A6FB3CF8-CDD8-4979-B945-DB832D636939}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Client\TaskManagerClient.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Server\TaskManagerServer.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Tests\TaskManagerTests.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="TaskManagerClient">
+        <MSBuild Projects="Client\TaskManagerClient.dproj"/>
+    </Target>
+    <Target Name="TaskManagerClient:Clean">
+        <MSBuild Projects="Client\TaskManagerClient.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TaskManagerClient:Make">
+        <MSBuild Projects="Client\TaskManagerClient.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TaskManagerServer">
+        <MSBuild Projects="Server\TaskManagerServer.dproj"/>
+    </Target>
+    <Target Name="TaskManagerServer:Clean">
+        <MSBuild Projects="Server\TaskManagerServer.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TaskManagerServer:Make">
+        <MSBuild Projects="Server\TaskManagerServer.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TaskManagerTests">
+        <MSBuild Projects="Tests\TaskManagerTests.dproj"/>
+    </Target>
+    <Target Name="TaskManagerTests:Clean">
+        <MSBuild Projects="Tests\TaskManagerTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TaskManagerTests:Make">
+        <MSBuild Projects="Tests\TaskManagerTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="TaskManagerClient;TaskManagerServer;TaskManagerTests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="TaskManagerClient:Clean;TaskManagerServer:Clean;TaskManagerTests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="TaskManagerClient:Make;TaskManagerServer:Make;TaskManagerTests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<test-results name="C:\Users\joaof\OneDrive\Documentos\GitHub\TaskManager\Tests\TaskManagerTests.exe" total="35" errors="0" failures="0" ignored="0" inconclusive="0" not-run="0" skipped="0" invalid="0" date="2026-03-08" time="0.031">
+  <culture-info current-culture="en" current-uiculture="en" />
+  <test-suite type="Assembly" name="TaskManagerTests.exe" executed="true" result="Success" success="True" time="0.031" asserts="0">
+    <results>
+        <test-suite type="Namespace" name="TaskManager" executed="true" result="Success" success="True" time="0.031" asserts="0" >
+          <results>
+              <test-suite type="Namespace" name="Tests" executed="true" result="Success" success="True" time="0.031" asserts="0" >
+                <results>
+                    <test-suite type="Fixture" name="TRttiMapperTests" executed="True" result="Success" success="True" time="0.001" >
+                      <results>
+                        <test-case name="Test_GetTableName_User_ReturnsUsers" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="Test_GetTableName_Task_ReturnsTasks" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="Test_GetColumnMappings_User_ContainsEmail" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="Test_GetColumnMappings_Task_ContainsUserId" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="Test_GetColumnMappings_User_IdIsPrimaryKey" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="Test_GetColumnMappings_User_IdIsAutoIncrement" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="Test_BuildInsertSQL_User_ExcludesId" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="Test_BuildInsertSQL_User_ContainsColumns" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="Test_BuildUpdateSQL_User_HasWhereClause" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                        <test-case name="Test_BuildSelectByIdSQL_User_Correct" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="Test_BuildSelectAllSQL_Task_Correct" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="Test_BuildDeleteSQL_Task_Correct" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="Test_GetPropertyValue_ReadsCorrectly" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="Test_SetPropertyValue_WritesCorrectly" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                      </results>
+                    </test-suite>
+                    <test-suite type="Fixture" name="TTaskServiceTests" executed="True" result="Success" success="True" time="0.027" >
+                      <results>
+                        <test-case name="Test_CreateTask_Success" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="Test_CreateTask_EmptyTitle_RaisesException" executed="True" result="Success" success="True" time="0.012" asserts="0" />
+                        <test-case name="Test_CreateTask_InvalidPriority_RaisesException" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                        <test-case name="Test_GetAllTasks_ReturnsOnlyUserTasks" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="Test_GetAllTasks_NeverReturnsOtherUserTasks" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="Test_UpdateStatus_OwnTask_Success" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="Test_UpdateStatus_OtherUserTask_Raises403" executed="True" result="Success" success="True" time="0.007" asserts="0" />
+                        <test-case name="Test_UpdateStatus_Completed_SetsCompletedAt" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="Test_DeleteTask_OwnTask_Success" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="Test_DeleteTask_OtherUserTask_Raises403" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="Test_DeleteTask_NonExistent_Raises404" executed="True" result="Success" success="True" time="0.007" asserts="0" />
+                        <test-case name="Test_Stats_TotalTaskCount" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="Test_Stats_AveragePendingPriority" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="Test_Stats_CompletedLast7Days" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                      </results>
+                    </test-suite>
+                    <test-suite type="Fixture" name="TUserServiceTests" executed="True" result="Success" success="True" time="0.003" >
+                      <results>
+                        <test-case name="Test_Register_Success" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="Test_Login_Success_Returns_JWT" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="Test_Register_DuplicateEmail_RaisesException" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="Test_Login_WrongPassword_RaisesException" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                        <test-case name="Test_Login_NonExistentEmail_RaisesException" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        <test-case name="Test_Register_EmptyName_RaisesException" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                        <test-case name="Test_Register_ShortPassword_RaisesException" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                      </results>
+                    </test-suite>
+                </results>
+              </test-suite>
+          </results>
+        </test-suite>
+    </results>
+  </test-suite>
+</test-results>

@@ -19,11 +19,12 @@
 *.dpk
 *.dproj.user
 *.dproj.local
-*.grouproj.local
 *.bak
 *.~bds
 *.~cfg
 *.~pas
+*.identcache
+*.tvsconfig
 
 # Ignorar pastas de compilação do Delphi
 \_bin
@@ -61,3 +62,10 @@ packages/
 
 # Ignorar arquivos de configuração do Delphi (configurações locais do projeto)
 *.local
+
+# Ignorar arquivos de histórico gerados pelo Delphi
+Client\src\Forms\__history\*
+
+# Ignorar arquivos groupproj.loca e user
+*.groupproj.loca
+*.user
