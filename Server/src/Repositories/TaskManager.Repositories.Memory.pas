@@ -61,7 +61,7 @@ implementation
 constructor TMemoryUserRepository.Create;
 begin
   inherited Create;
-  FItems := TObjectList<TUser>.Create(False); // Nao owns - gerenciamos manualmente
+  FItems := TObjectList<TUser>.Create(False);
   FNextId := 1;
 end;
 

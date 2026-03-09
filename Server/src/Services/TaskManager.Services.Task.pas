@@ -52,33 +52,9 @@ var
   LEntity: TBaseEntity;
   LResult: TObjectList<TTask>;
 begin
-  // CONTEXTO DO BUG ORIGINAL:
-  //
-  // O problema e que os dois repositorios tem comportamentos diferentes:
-  //   - TMemoryTaskRepository.FindByUserId -> retorna Create(False)
-  //     Os objetos TTask pertencem ao FItems interno do repositorio.
-  //     O caller so pode liberar a lista container.
-  //
-  //   - TSQLServerTaskRepository.FindByUserId -> retorna Create(True)
-  //     Os objetos TTask sao criados novos a cada consulta.
-  //     A lista e dona deles.
-  //
-  // A correção anterior usava Extract + Create(True) no LResult,
-  // o que funcionava para SQL Server mas causava "Invalid pointer operation"
-  // no repositorio em memoria (tentava extrair objetos que nao eram owned).
-  //
-  // SOLUCAO:
-  // Retornamos uma lista NAO-dona (OwnsObjects=False) que apenas referencia
-  // os objetos. A lista do repositorio (LEntities) NAO e liberada aqui -
-  // quem chamou GetAllTasks recebe a responsabilidade de liberar
-  // apenas a lista LResult (que nao destroi os objetos).
-  //
-  // Para o SQL Server: precisamos que LEntities tambem nao destrua,
-  // entao desabilitamos OwnsObjects antes de liberar o container.
-
   LEntities := FRepository.FindByUserId(AUserId);
   try
-    LResult := TObjectList<TTask>.Create(False); // Nunca destroi os objetos
+    LResult := TObjectList<TTask>.Create(False);
     try
       for LEntity in LEntities do
         LResult.Add(LEntity as TTask);
@@ -87,9 +63,6 @@ begin
       raise;
     end;
   finally
-    // Desabilitar OwnsObjects antes de liberar para nao destruir os TTask.
-    // - Memory repo: ja era False, nao muda nada
-    // - SQL Server repo: era True, sem isso destruiria os objetos
     LEntities.OwnsObjects := False;
     LEntities.Free;
   end;

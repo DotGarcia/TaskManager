@@ -15,10 +15,6 @@ type
   /// <summary>
   /// Controller de Tarefas (Camada C do MVC).
   /// Todos os endpoints exigem autenticacao JWT.
-  ///
-  /// CORRECAO: UserId extraido via TJWTAuthHelper.GetUserIdFromRequest()
-  /// diretamente do header Authorization, em vez de Req.Headers['X-User-Id']
-  /// que e read-only no Horse.
   /// </summary>
   TTaskController = class
   private

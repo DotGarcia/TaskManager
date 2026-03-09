@@ -11,13 +11,6 @@ type
   /// <summary>
   /// Middleware de autenticacao JWT para o framework Horse.
   /// Intercepta requisicoes protegidas e valida o token Bearer.
-  ///
-  /// NOTA: Os Req.Headers do Horse sao somente leitura (read-only),
-  /// portanto NAO e possivel usar Req.Headers['X-User-Id'] := ...
-  /// nem Req.Headers.AddValue(...).
-  ///
-  /// Solucao: O middleware apenas valida o token. Os controllers
-  /// extraem UserId/Email diretamente do JWT via TJWTAuthHelper.
   /// </summary>
   TAuthMiddleware = class
   public

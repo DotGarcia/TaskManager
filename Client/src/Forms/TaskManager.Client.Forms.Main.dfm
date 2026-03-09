@@ -4,9 +4,9 @@ object frmMain: TfrmMain
   Caption = 'TaskManager BDMG'
   ClientHeight = 560
   ClientWidth = 860
-  Color = $00F5F5F5
+  Color = clWhitesmoke
   Font.Charset = DEFAULT_CHARSET
-  Font.Color = $00333333
+  Font.Color = 3355443
   Font.Height = -13
   Font.Name = 'Segoe UI'
   Font.Style = []
@@ -21,14 +21,18 @@ object frmMain: TfrmMain
     Height = 56
     Align = alTop
     BevelOuter = bvNone
-    Color = $00333333
+    Color = 3355443
     ParentBackground = False
     TabOrder = 0
+    ExplicitWidth = 858
+    DesignSize = (
+      860
+      56)
     object lblWelcome: TLabel
       Left = 20
       Top = 16
-      Width = 300
-      Height = 24
+      Width = 173
+      Height = 25
       Caption = 'TaskManager BDMG'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWhite
@@ -38,15 +42,16 @@ object frmMain: TfrmMain
       ParentFont = False
     end
     object pnlBtnLogout: TPanel
-      Left = 760
-      Top = 12
+      Left = 758
+      Top = 18
       Width = 80
       Height = 32
+      Anchors = [akTop, akRight]
       BevelOuter = bvNone
       Caption = 'Sair'
-      Color = $00555555
+      Color = 5592405
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = $00CCCCCC
+      Font.Color = 13421772
       Font.Height = -12
       Font.Name = 'Segoe UI'
       Font.Style = []
@@ -60,11 +65,12 @@ object frmMain: TfrmMain
       Top = 12
       Width = 88
       Height = 32
+      Anchors = [akTop, akRight]
       BevelOuter = bvNone
       Caption = 'Atualizar'
-      Color = $00555555
+      Color = 5592405
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = $00CCCCCC
+      Font.Color = 13421772
       Font.Height = -12
       Font.Name = 'Segoe UI'
       Font.Style = []
@@ -82,12 +88,14 @@ object frmMain: TfrmMain
     ActivePage = tabTasks
     Align = alClient
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = $00333333
+    Font.Color = 3355443
     Font.Height = -13
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
     TabOrder = 1
+    ExplicitWidth = 858
+    ExplicitHeight = 472
     object tabTasks: TTabSheet
       Caption = '  Tarefas  '
       object pnlTaskActions: TPanel
@@ -100,6 +108,7 @@ object frmMain: TfrmMain
         Color = clWhite
         ParentBackground = False
         TabOrder = 0
+        ExplicitWidth = 850
         object pnlBtnAdd: TPanel
           Left = 12
           Top = 10
@@ -107,7 +116,7 @@ object frmMain: TfrmMain
           Height = 32
           BevelOuter = bvNone
           Caption = '+ Nova Tarefa'
-          Color = $00EE7700
+          Color = 15628032
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWhite
           Font.Height = -13
@@ -125,9 +134,9 @@ object frmMain: TfrmMain
           Height = 32
           BevelOuter = bvNone
           Caption = 'Alterar Status'
-          Color = $00F2F2F2
+          Color = 15921906
           Font.Charset = DEFAULT_CHARSET
-          Font.Color = $00555555
+          Font.Color = 5592405
           Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
@@ -143,9 +152,9 @@ object frmMain: TfrmMain
           Height = 32
           BevelOuter = bvNone
           Caption = 'Remover'
-          Color = $00F2F2F2
+          Color = 15921906
           Font.Charset = DEFAULT_CHARSET
-          Font.Color = $004040FF
+          Font.Color = 4210943
           Font.Height = -13
           Font.Name = 'Segoe UI'
           Font.Style = []
@@ -159,11 +168,12 @@ object frmMain: TfrmMain
         Left = 0
         Top = 52
         Width = 852
-        Height = 398
+        Height = 396
         Align = alClient
         Color = clWhite
+        Columns = <>
         Font.Charset = DEFAULT_CHARSET
-        Font.Color = $00333333
+        Font.Color = 3355443
         Font.Height = -12
         Font.Name = 'Segoe UI'
         Font.Style = []
@@ -181,10 +191,10 @@ object frmMain: TfrmMain
         Left = 0
         Top = 0
         Width = 852
-        Height = 450
+        Height = 448
         Align = alClient
         BevelOuter = bvNone
-        Color = $00F5F5F5
+        Color = clWhitesmoke
         ParentBackground = False
         TabOrder = 0
         object pnlStatCard1: TPanel
@@ -199,11 +209,11 @@ object frmMain: TfrmMain
           object lblStatTitle1: TLabel
             Left = 20
             Top = 20
-            Width = 200
+            Width = 93
             Height = 17
             Caption = 'Total de Tarefas'
             Font.Charset = DEFAULT_CHARSET
-            Font.Color = $00888888
+            Font.Color = 8947848
             Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
@@ -212,11 +222,11 @@ object frmMain: TfrmMain
           object lblStatValue1: TLabel
             Left = 20
             Top = 52
-            Width = 200
-            Height = 42
+            Width = 18
+            Height = 45
             Caption = '0'
             Font.Charset = DEFAULT_CHARSET
-            Font.Color = $00EE7700
+            Font.Color = 15628032
             Font.Height = -32
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
@@ -235,11 +245,11 @@ object frmMain: TfrmMain
           object lblStatTitle2: TLabel
             Left = 20
             Top = 20
-            Width = 200
+            Width = 174
             Height = 17
             Caption = 'Media Prioridade (Pendentes)'
             Font.Charset = DEFAULT_CHARSET
-            Font.Color = $00888888
+            Font.Color = 8947848
             Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
@@ -248,11 +258,11 @@ object frmMain: TfrmMain
           object lblStatValue2: TLabel
             Left = 20
             Top = 52
-            Width = 200
-            Height = 42
+            Width = 63
+            Height = 45
             Caption = '0.00'
             Font.Charset = DEFAULT_CHARSET
-            Font.Color = $00EE7700
+            Font.Color = 15628032
             Font.Height = -32
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
@@ -271,11 +281,11 @@ object frmMain: TfrmMain
           object lblStatTitle3: TLabel
             Left = 20
             Top = 20
-            Width = 200
+            Width = 110
             Height = 17
             Caption = 'Concluidas (7 dias)'
             Font.Charset = DEFAULT_CHARSET
-            Font.Color = $00888888
+            Font.Color = 8947848
             Font.Height = -13
             Font.Name = 'Segoe UI'
             Font.Style = []
@@ -284,11 +294,11 @@ object frmMain: TfrmMain
           object lblStatValue3: TLabel
             Left = 20
             Top = 52
-            Width = 200
-            Height = 42
+            Width = 18
+            Height = 45
             Caption = '0'
             Font.Charset = DEFAULT_CHARSET
-            Font.Color = $00EE7700
+            Font.Color = 15628032
             Font.Height = -32
             Font.Name = 'Segoe UI'
             Font.Style = [fsBold]
@@ -302,7 +312,7 @@ object frmMain: TfrmMain
           Height = 40
           BevelOuter = bvNone
           Caption = 'Atualizar Estatisticas'
-          Color = $00EE7700
+          Color = 15628032
           Font.Charset = DEFAULT_CHARSET
           Font.Color = clWhite
           Font.Height = -13
@@ -322,7 +332,7 @@ object frmMain: TfrmMain
     Width = 860
     Height = 24
     Font.Charset = DEFAULT_CHARSET
-    Font.Color = $00666666
+    Font.Color = 6710886
     Font.Height = -12
     Font.Name = 'Segoe UI'
     Font.Style = []
@@ -330,5 +340,7 @@ object frmMain: TfrmMain
     SimplePanel = True
     SimpleText = 'Pronto'
     UseSystemFont = False
+    ExplicitTop = 528
+    ExplicitWidth = 858
   end
 end
