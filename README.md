@@ -111,7 +111,7 @@ O servidor carrega suas configurações de um arquivo JSON no mesmo diretório d
     "port": 9000
   },
   "jwt": {
-    "secretKey": "TaskManager_BDMG_SecretKey_2025!@#",
+    "secretKey": "TaskManager_BDMG_SecretKey_2026!@#",
     "expirationHours": 24
   }
 }
